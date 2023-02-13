@@ -1,8 +1,13 @@
 [package]
+edition = "2021"
 name = "renovate-range-reproducer"
 version = "0.1.0"
-edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+# semver below 0 - from cargo docs, this matches this pattern:
+# 0.2.3  :=  >=0.2.3, <0.3.0
+# and so equivalent to:
+# 0.4.16 := >=0.4.16, <0.5.0
+log = "0.4.16"
